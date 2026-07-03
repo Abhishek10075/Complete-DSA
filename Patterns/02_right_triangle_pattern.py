@@ -1,3 +1,4 @@
+#Right Traingle
 for i in range(0,5):
     for j in range(0,i+1):
         print('*',end=' ')
@@ -17,3 +18,21 @@ for i in range(1, 6):
         print(i, end=' ')
     print()
 
+'''* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5 
+
+1 
+2 2 
+3 3 3 
+4 4 4 4 
+5 5 5 5 5
+'''
