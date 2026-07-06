@@ -41,3 +41,25 @@ SC=O(1)
 
 #Solution 3
 
+from math import sqrt
+class Solution:
+    def isPrime(self, n):
+        # code here
+        count=0
+        for i in range(1,int(sqrt(n))+1):
+            if n%i==0:
+                count+=1
+                if n//i !=i:
+                    count+=1
+        if count==2:
+            return True
+        else:
+            return False
+        
+obj=Solution()
+print(obj.isPrime(29))
+
+'''
+TC=O(√n)
+SC=O(1)
+'''

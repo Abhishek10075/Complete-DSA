@@ -24,7 +24,17 @@ class Solution:
 
         return a_fact, b_fact, largest
 obj=Solution()
-print(obj.gcd(15,18))
+print(obj.gcd(11,13))
+
+#method 2
+from math import sqrt
+
+class Solution:
+    def gcd(self, a, b):
+        for i in range(1, min(a,b)+1):
+            if a%i==0 and b%i==0:
+                gcd=i
+        return gcd
             
 '''
 ([1, 3, 5, 15], [1, 2, 3, 6, 9, 18], 3)
