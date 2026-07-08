@@ -17,3 +17,20 @@ TC=o(NlogN)+ o(n)
 SC=o(1)
 '''
 #Solution 2
+
+class Solution:
+    def getSecondLargest(self, arr):
+        n=len(arr)-1
+        lar=-1
+        sec=-1
+        for i in range(0,n+1):
+            if arr[i]>lar:
+                sec=lar
+                lar=arr[i]
+            elif arr[i]>sec and arr[i]!=lar:
+                sec=arr[i]
+            else:
+                continue
+        return sec
+      
+        
