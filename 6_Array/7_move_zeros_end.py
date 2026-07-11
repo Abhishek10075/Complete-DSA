@@ -24,11 +24,49 @@ SC=o(n2)->o(n)
 '''
 
 #Solution 2 ->optimal
-arr=[1,0,2,3,2,0,0,4,5,1]
+'''
+class Solution:
+	def pushZerosToEnd(self, arr):
+    	# code here
+    	n=len(arr)-1
+    	for i in range(0,n+1):
+    	    if arr[i]==0:
+    	        for j in range(i+1,n+1):
+    	            if arr[j]!=0:
+    	                arr[i],arr[j]=arr[j],arr[i]
+    	                break
+    	return arr
+    	
+'''
 
-n=len(arr)-1
-for j in range(0,n+1):
-    if arr[j]!=0:
-        i=j
-    elif arr[j]==0:
-        
+#Solution 3
+
+class Solution:
+    def pushZerosToEnd(self, arr):
+        # code here
+        n = len(arr) - 1
+
+        if len(arr) == 0:
+            return
+
+        i = 0
+        while i < n + 1:
+            if arr[i] == 0:
+                break
+            i += 1
+
+        if i == n + 1:
+            return
+
+        j = i + 1
+        while j < n + 1:
+            if arr[j] != 0:
+                arr[i], arr[j] = arr[j], arr[i]
+                i += 1
+            j += 1
+        return arr
+    
+''''
+TC->o(n)
+SC->o(1)
+'''
