@@ -1,6 +1,6 @@
 #1. Solution
 
-'''
+
 class Solution:
     def getSecondLargest(self, arr):
         n=len(arr)-1
@@ -11,7 +11,7 @@ class Solution:
             if arr[i]>sec_lar and arr[i] != lar:
                 sec_lar=arr[i]
         return sec_lar
-'''
+
 '''
 TC=o(NlogN)+ o(n)
 SC=o(1)

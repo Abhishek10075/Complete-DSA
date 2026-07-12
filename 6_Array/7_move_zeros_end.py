@@ -1,5 +1,5 @@
 #Solution 1
-'''
+
 arr=[1,0,2,3,2,0,0,4,5,1]
 n=len(arr)-1
 temp=[]
@@ -19,11 +19,12 @@ for j in range(n2+1,n+1):#o(n1-n2)
 print(temp)
 print(arr)
 
+'''
 TC=o(n)+ o(n2)+oN(n1-n2)
 SC=o(n2)->o(n)
 '''
 
-#Solution 2 ->optimal
+#Solution 2 ->
 '''
 class Solution:
 	def pushZerosToEnd(self, arr):

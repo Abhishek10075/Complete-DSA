@@ -1,5 +1,5 @@
-'''
-Solution 1
+
+#Solution 1
 
 class Solution:
     def removeDuplicates(self, arr):
@@ -15,7 +15,7 @@ class Solution:
         arr=arr[:j]
         return arr
         
-
+'''
 
 Time Complexity: O(n)
 Space Complexity: O(n)
