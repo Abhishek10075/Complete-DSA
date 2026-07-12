@@ -5,7 +5,7 @@ class Solution(object):
     def rotate(self, nums, k):
         n=len(nums)
         k=k%n
-        for i in range(0,k):#o(r)
+        for i in range(0,k):#o(k)
             last_el=nums.pop()#o(1)
             nums.insert(0,last_el)#o(N)
 

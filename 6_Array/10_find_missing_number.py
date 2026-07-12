@@ -66,4 +66,8 @@ print("Missing number :",missing_num)
 '''
 TC=O(N)+O(N)
 SC=O(1)
+
 '''
+
+#Solution 4->using xor pending
+
