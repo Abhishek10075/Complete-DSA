@@ -33,4 +33,7 @@ class Solution:
                 continue
         return sec
       
-        
+'''
+TC=o(N)
+SC=o(1)
+'''      
