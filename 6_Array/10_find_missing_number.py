@@ -59,7 +59,7 @@ print("Missing number is ",missing_number)
 nums=[8, 2, 4, 5, 3, 7, 1,6,10]
 class Solution(object):
     def missingNumber(self, nums):
-        n=len(nums)#we have to add the one extra to find the last number 
+        n=len(nums) 
         sum_natural=(n*(n+1))//2#TC=O(N)
         sum_num=sum(nums)#TC=O(N)
         missing_num=sum_natural-sum_num
