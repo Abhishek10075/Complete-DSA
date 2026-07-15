@@ -1,27 +1,40 @@
+#Program: Count the Number of Subarrays with Sum Equal to K
+class Solution(object):
+    def subarraySum(self, nums, k):
+        n=len(nums)-1
+        count=0
+        for i in range(0,n+1):
+            sum=0
+            for j in range(i,n+1):
+                sum+=nums[j]
+                if sum==k:
+                    count+=1
+            
+        return count
+
+
 # #Solution 1
-# class Solution:
+class Solution:
 
-#     def longestSubarray(self, nums, k):
-#         n = len(nums)
-#         max_len = 0
+    def longestSubarray(self, nums, k):
+        n = len(nums)
+        max_len = 0
 
-#         for i in range(n):
-#             s = 0
-#             for j in range(i, n):
-#                 s += nums[j]
+        for i in range(n):
+            s = 0
+            for j in range(i, n):
+                s += nums[j]
 
-#                 if s == k:
-#                     length = j - i + 1
-#                     max_len = max(max_len, length)
+                if s == k:
+                    length = j - i + 1
+                    max_len = max(max_len, length)
 
-#         return max_len
+        return max_len
     
 # '''
 # TC=o(N*N)
 # SC=o(1)
 # '''
-
-#Solution 2->optimal
 
 # Solution 2 -> optimal
 arr = [1,2,3,1,1,1,1,3,3]
