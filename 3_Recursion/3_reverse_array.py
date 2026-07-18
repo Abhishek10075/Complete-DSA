@@ -9,7 +9,7 @@ def reverse(left,right,lst):
     
     else:
         lst[left],lst[right]=lst[right],lst[left]
-    reverse(left+1,right-1,lst)
+        reverse(left+1,right-1,lst)
     return lst
 print(reverse(left,right,lst))
 

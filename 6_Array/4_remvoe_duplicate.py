@@ -17,7 +17,7 @@ class Solution:
         
 '''
 
-Time Complexity: O(n)
+Time Complexity: O(2n)~o(n)
 Space Complexity: O(n)
 '''
 

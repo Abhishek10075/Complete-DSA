@@ -1,5 +1,4 @@
-#Solution 1 ->Brute
-# Solution 1 -> Brute Force
+# Solution 1 -> Brute
 class Solution:
     def twoSum(self, arr, target):
         # code here

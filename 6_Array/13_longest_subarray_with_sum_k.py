@@ -18,7 +18,7 @@ class Solution:
 
     def longestSubarray(self, nums, k):
         n = len(nums)
-        max_len = 0
+        max_count = 0
 
         for i in range(n):
             s = 0
@@ -27,49 +27,46 @@ class Solution:
 
                 if s == k:
                     length = j - i + 1
-                    max_len = max(max_len, length)
+                    max_count = max(max_count, length)
 
-        return max_len
+        return max_count
     
-# '''
-# TC=o(N*N)
-# SC=o(1)
-# '''
+'''
+TC=o(N*N)
+SC=o(1)
+ '''
 
-# Solution 2 -> optimal
-arr = [1,2,3,1,1,1,1,3,3]
-k = 6
-n = len(arr) - 1
 
-sum = 0
-i, j = 0, 0
-max_l = 0
 
-while j < n + 1:
-    sum = sum + arr[j]
 
-    if sum < k:
-        j = j + 1
 
-    elif sum == k:
-        l = j - i + 1
-        max_l = max(max_l, l)
-        j = j + 1
+#Prefix sum->optimal solution
 
-    elif sum > k:
-        while sum > k and i <= j:
-            sum = sum - arr[i]
-            i = i + 1
+arr=[9,4,20,3,10,5]
+k=33
+n=len(arr)
+prefix_sum=0
+max_count=0
+hashmap={}
+for i in range(n):
+    prefix_sum+=arr[i]
 
-        if sum == k:
-            l = j - i + 1
-            max_l = max(max_l, l)
+    if prefix_sum==k:
+        max_count=i+1
 
-        j = j + 1
+    rem=prefix_sum-k
 
-print(max_l)
+    if rem in hashmap:
+        length=i-hashmap[rem]
+        max_count=max(max_count,length)
+
+    if prefix_sum not in hashmap:
+        hashmap[prefix_sum]=i
+print("Maximum Length:",max_count)
 
 '''
-Time Complexity: O(n)
-Space Complexity: O(1)
+TC=o(n)
+SC=o(1)
 '''
+    
+
