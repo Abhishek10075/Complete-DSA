@@ -18,7 +18,32 @@ class Solution:
  SC=o(1)
  '''  
 
-#Solution 2->Better
+#Solution 2->Better using sorting
+class Solution:
+    def majorityElement(self, arr):
+        #code here
+        arr.sort()
+        n=len(arr)
+        if n==1:
+            return arr[0]
+        count=1
+        ans=arr[0]
+        for i in range(1,n):
+            if arr[i]==ans:
+                count+=1
+                if count>n//2:
+                    return ans
+            elif arr[i]!=ans:
+                ans=arr[i]
+                count=1
+        return -1
+                
+'''
+TC=O(n log n)+o(n)
+SC=o(1)
+'''              
+
+#Solution 3->Better
 class Solution:
     def majorityElement(self, arr):
         #code here
@@ -40,3 +65,31 @@ TC=o(n)
 SC=o(n)
 '''
     
+#Solution 4 ->Optimal 
+class Solution:
+    def majorityElement(self, arr):
+        n = len(arr)
+
+        majority = None
+        count = 0
+
+        # Phase 1: Find the potential majority element
+        for element in arr:
+            if count == 0:
+                majority = element
+                count = 1
+            elif element == majority:
+                count += 1
+            else:
+                count -= 1
+
+        # Phase 2: Verify that it is actually the majority
+        count = 0
+        for element in arr:
+            if element == majority:
+                count += 1
+
+        if count > n // 2:
+            return majority
+
+        return -1

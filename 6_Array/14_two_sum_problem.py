@@ -31,7 +31,7 @@ TC=o(n)
 SC=o(n)
 '''
 
-#Solution 3->optimal
+#Solution 3->optimal (If array is sorted)
 def twoSum(nums, target):
     left = 0
     right = len(nums) - 1
