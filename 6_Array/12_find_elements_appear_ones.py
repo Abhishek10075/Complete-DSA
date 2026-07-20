@@ -18,21 +18,21 @@ SC=o(1)
 
 #Solution 2 -Better usign hashing
 
-class Solution:
-    def findUnique(self, arr):
-        hash_map = {}
+class Solution(object):
+    def singleNumber(self, nums):
+        n=len(nums)-1
+        f={}
+        for i in range(0,n+1):
+            if nums[i] not in f:
+                f[nums[i]]=1
+            elif nums[i] in f:
+                f[nums[i]]+=1
+        for k,v in f.items():
+            if v==1:
+                return k
 
-        # Count frequency
-        for num in arr:
-            if num not in hash_map:
-                hash_map[num] = 1
-            else:
-                hash_map[num] += 1
-
-        # Find unique element
-        for num in arr:
-            if hash_map[num] == 1:
-                return num
+     
+        
 '''
 TC=o(2N)
 SC=o(N)

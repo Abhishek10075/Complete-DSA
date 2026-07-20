@@ -13,7 +13,7 @@ class Solution(object):
         return count
 
 
-# #Solution 1
+# #Solution 1->Find the length of the longest subarray whose sum equals k.
 class Solution:
 
     def longestSubarray(self, nums, k):
