@@ -15,7 +15,7 @@ TC=o(n*n)
 SC=o(1)
 '''
 
-#Solution 2->optimal 
+#Solution 2->optimal(Kadane's Algorithm)
 class Solution(object):
     def maxSubArray(self, nums):
         n=len(nums)-1
