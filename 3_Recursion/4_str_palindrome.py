@@ -10,6 +10,9 @@ class Solution:
             right=right-1
         return True
 
+'''
+TC=o(n/2)->o(n)
+'''
 #Using the Recursion
 class Solution:
     def isPalindrome(self, s):

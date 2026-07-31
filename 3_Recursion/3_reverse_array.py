@@ -29,3 +29,17 @@ class Solution:
         
         return arr
     
+#using the while loop
+class Solution:
+
+    def reverseArray(self, arr):
+        # code here
+        n=len(arr)-1
+        left=0
+        right=n
+        while left<=right:
+            arr[left],arr[right]=arr[right],arr[left]
+            left+=1
+            right-=1
+        return arr
+            
