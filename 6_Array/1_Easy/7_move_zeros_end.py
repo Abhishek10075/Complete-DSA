@@ -25,23 +25,8 @@ TC=o(n)+ o(n2)+oN(n1-n2)
 SC=o(n2)->o(n)
 '''
 
-#Solution 2 ->
-'''
-class Solution:
-	def pushZerosToEnd(self, arr):
-    	# code here
-    	n=len(arr)-1
-    	for i in range(0,n+1):
-    	    if arr[i]==0:
-    	        for j in range(i+1,n+1):
-    	            if arr[j]!=0:
-    	                arr[i],arr[j]=arr[j],arr[i]
-    	                break
-    	return arr
-    	
-'''
 
-#Solution 3
+#Solution 2
 
 class Solution:
     def pushZerosToEnd(self, arr):
