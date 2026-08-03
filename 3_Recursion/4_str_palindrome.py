@@ -63,6 +63,8 @@ class Solution(object):
         for ch in s:
             if ch.isalnum():
                 valid.append(ch.lower())
+            else:
+                continue
         n=len(valid)
         left=0
         right=n-1
