@@ -35,3 +35,27 @@ class Solution:
 TC=o(n)
 SC=o(n)
 '''
+
+#Optimal Solutions
+class Solution:
+    def leaders(self, arr):
+        n=len(arr)-1
+        max_el=float('-inf')
+        lead=[]
+        for i in range(n,-1,-1):
+            if arr[i]>=max_el:
+                lead.append(arr[i])
+                max_el=arr[i]
+        n2=len(lead)-1
+        left=0
+        right=n2
+        while left<=right:
+            lead[left],lead[right]=lead[right],lead[left]
+            left+=1
+            right-=1
+        
+        return lead
+'''
+TC=O(n)+O(n/2)
+SC=O(n)
+'''

@@ -47,3 +47,18 @@ O(√n + k log k)
 SC=O(k) //where k is the number of divisors.
 o/p-> [1, 2, 3, 4, 6, 9, 12, 18, 36]
 '''
+
+
+
+from math import sqrt
+class Solution:
+    def getDivisors(self, n):
+        # code here
+        divisor=[]
+        half=(n)//2
+        for i in range(1,half+1):
+            if n%i==0:
+                divisor.append(i)
+        divisor.append(n)
+        return divisor
+            
