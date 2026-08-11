@@ -48,6 +48,31 @@ class Solution(object):
 
 
 '''
-TC=n log(n) + o(n)
+TC= o(N log N) + o(N)
+SC=o(1)
+'''
+#optimal 
+class Solution(object):
+    def longestConsecutive(self, nums):
+        unique = set(nums)
+        longest = 0
+
+        for num in unique:
+
+            # Start only if num is the beginning
+            if num - 1 not in unique:
+
+                count = 1
+                current = num
+
+                while current + 1 in unique:
+                    current += 1
+                    count += 1
+
+                longest = max(longest, count)
+
+        return longest
+'''
+TC=o(n)
 SC=o(1)
 '''
