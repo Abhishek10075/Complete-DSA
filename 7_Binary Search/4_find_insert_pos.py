@@ -2,21 +2,20 @@
 class Solution(object):
     def searchInsert(self, nums, target):
         n=len(nums)-1
-        left=0
-        right=n
-        index=0
-        if target<nums[0]:
-            return 0
+        l=0
+        r=n
+        pos=n
         if target>nums[n]:
             return n+1
-        while left<=right:
-            mid=(left+right)//2
+        while l<=r:
+            mid=(l+r)//2
             if nums[mid]>=target:
-                index=mid
-                right=mid-1
+                pos=mid
+                r=mid-1
             else:
-                left=mid+1
-        return index
+                l=mid+1
+        return pos
+
 '''
 TC=o(log n)
 SC=o(1)
