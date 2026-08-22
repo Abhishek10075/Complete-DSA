@@ -29,6 +29,8 @@ class Solution:
             else:
                 l=mid+1
         return ceil
+
+    
 #Find Flor and Ceil
 
 class Solution:
