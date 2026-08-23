@@ -52,14 +52,16 @@ print(break_point)
 class Solution:
     def check(self, nums):
         n = len(nums)
-        break_points = 0
+        break_count = 0
 
         for i in range(n - 1):
             if nums[i] > nums[i + 1]:
-                break_points += 1
+                break_count += 1
 
         if nums[-1] > nums[0]:
-            break_points += 1
+            break_count += 1
 
-        return break_points <= 1
-    
+        if break_count <= 1:
+            return True
+        else:
+            return False
