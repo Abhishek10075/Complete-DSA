@@ -66,7 +66,7 @@ class Solution(object):
         return  missing_num
         
 '''
-TC=O(N)+O(N)
+TC=O(N)
 SC=O(1)
 
 '''
