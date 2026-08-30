@@ -11,23 +11,17 @@ class Solution(object):
 #Optimal solution->Binary Search
 class Solution(object):
     def findMin(self, nums):
-        n = len(nums) - 1
-        mini = float('inf')
-        l = 0
-        r = n
-
-        while l <= r:
-            mid = (l + r) // 2
-
-            # Left part is sorted
-            if nums[l] <= nums[mid]:
-                mini = min(mini, nums[l])
-                l = mid + 1
-
-            # Right part is sorted
+        n=len(nums)-1
+        l=0
+        r=n
+        mini=float('inf')
+        while l<=r:
+            mid=(l+r)//2
+            if nums[l]<=nums[r]:
+                mini=min(mini,nums[l])
+            mini=min(mini,nums[mid])
+            if nums[mid]>=nums[l]:
+                l=mid+1
             else:
-                mini = min(mini, nums[mid])
-                r = mid - 1
-
+                r=mid-1
         return mini
-    
