@@ -1,4 +1,3 @@
-
 class Solution(object):
     def search(self, nums, target):
         n=len(nums)-1
