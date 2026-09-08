@@ -13,6 +13,7 @@ class Solution(object):
                 return i-1
 
 
+
 #optimal Solution->Binary Search
 class Solution(object):
     def mySqrt(self, x):
@@ -29,4 +30,5 @@ class Solution(object):
             else:
                 r=mid-1
         return ans
+
     

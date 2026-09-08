@@ -1,5 +1,6 @@
 #Find K Rotation in a Sorted Rotated Array-Brute Force
 class Solution:
+
     def findKRotation(self, arr):
         n = len(arr) - 1
         break_point = -1
@@ -10,6 +11,8 @@ class Solution:
                 break
 
         return break_point + 1
+
+ 
 #optimal solution->Binary Search
 class Solution:
     def findKRotation(self, arr):

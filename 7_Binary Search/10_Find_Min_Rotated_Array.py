@@ -19,7 +19,9 @@ class Solution(object):
             mid=(l+r)//2
             if nums[l]<=nums[r]:
                 mini=min(mini,nums[l])
+
             mini=min(mini,nums[mid])
+
             if nums[mid]>=nums[l]:
                 l=mid+1
             else:
