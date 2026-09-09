@@ -45,19 +45,23 @@ class Solution:
 #leet code 
 class Solution(object):
     def findGCD(self, nums):
-        smaller=nums[0]
-        for i in range(0,len(nums)):
-            if nums[i]<smaller:
-                smaller=nums[i]
-        larger=nums[0]
-        for j in range(0,len(nums)):
-            if nums[j]>larger:
-                larger=nums[j]
-        
-        for i in range(1,smaller+1):
-            if smaller%i==0 and larger%i==0:
+        n=len(nums)-1
+        n=len(nums)-1
+        mn=float('inf')
+        mx=float('-inf')
+        for i in range(0,n+1):
+            if nums[i]>mx:
+                mx=max(mx,nums[i])
+            if nums[i]<mn:
+                mn=min(mn,nums[i])
+        gcd=1 
+        for i in range(1,mn+1):
+            if mn%i==0 and mx%i==0:
                 gcd=i
         return gcd
+
+
+        
     
 
    
