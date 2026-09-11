@@ -43,6 +43,8 @@ TC=O(n log n)+o(n)
 SC=o(1)
 '''              
 
+
+#Boyer-Moore Majority Vote Algorithm
 #Solution 3->Better
 class Solution:
     def majorityElement(self, arr):

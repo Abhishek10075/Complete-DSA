@@ -1,3 +1,5 @@
+#136. Single Number — Easy
+
 #Solution 1-Brute 
 
 class Solution:
