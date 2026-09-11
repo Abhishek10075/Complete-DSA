@@ -24,8 +24,6 @@ class Solution(object):
         last_smaller=float('-inf')
         longest=0
         count=0
-        if n==0:
-            return 1
         for i in range(0,n+1):
             if count==0:
                 last_smaller=nums[i]
@@ -43,4 +41,54 @@ class Solution(object):
         return longest
             
 
-        
+#better correct version
+class Solution(object):
+    def longestConsecutive(self, nums):
+
+        nums.sort()
+
+        n = len(nums) - 1
+        last_smaller = float('-inf')
+        longest = 0
+        count = 0
+
+        for i in range(0, n + 1):
+            num = nums[i]
+
+            if num - 1 == last_smaller:
+                count += 1
+                last_smaller = num
+
+            elif num != last_smaller:
+                count = 1
+                last_smaller = num
+
+            longest = max(longest, count)
+
+        return longest
+
+#optimal solution using set
+class Solution(object):
+    def longestConsecutive(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+    
+        longest=0
+        count=1
+        my_set=set()
+        for num in nums:
+            my_set.add(num)
+        n=len(my_set)-1
+        for i in my_set:
+            num=i
+            if num-1 not in my_set:
+                count=1
+                x=num
+                while x+1 in my_set:
+                    count+=1
+                    x+=1
+                longest=max(longest,count)
+    
+        return longest
