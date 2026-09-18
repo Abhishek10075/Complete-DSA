@@ -1,5 +1,4 @@
 # Solution 1 -> Brute
-
 class Solution(object):
     def rotate(self, nums, k):
         n = len(nums)

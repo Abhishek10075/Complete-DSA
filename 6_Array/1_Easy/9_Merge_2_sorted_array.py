@@ -74,6 +74,7 @@ class Solution(object):
                 nums1[k]=nums2[j]
                 j-=1
             k-=1
+            
         while j>=0: #may be nums2 has some elements left ,nums1 has all elements in place
             nums1[k]=nums2[j]
             j-=1
