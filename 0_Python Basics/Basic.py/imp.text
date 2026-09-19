@@ -1,0 +1,184 @@
+Q1. What is Multithreading?
+
+Multithreading is a technique where multiple threads run concurrently 
+within a single program to perform multiple tasks.
+
+Simple example:
+Imagine a program that needs to:
+
+Download a file
+Read a file
+Process some data
+
+
+Q2. Realtionship
+1. Inheritance → IS-A Relationship
+
+Inheritance means a child class gets the properties and methods of a parent class.
+
+class Animal:
+    def eat(self):
+        print("Eating")
+
+class Dog(Animal):
+    pass
+
+dog = Dog()
+dog.eat()
+
+Here:
+
+Dog IS-A Animal
+
+So, inheritance represents an IS-A relationship.
+
+Interview answer:
+
+"Inheritance is an IS-A relationship where a child class inherits properties
+ and methods from a parent class."
+
+2. Association → USES-A / Interacts-With Relationship
+
+Association means two independent classes interact with each other.
+
+class Teacher:
+    def teach(self):
+        print("Teaching")
+
+class Student:
+    def learn(self):
+        print("Learning")
+
+A Teacher can interact with a Student, but both can exist independently.
+
+Example:
+
+Teacher ↔ Student
+
+Other examples:
+
+Doctor ↔ Patient
+Customer ↔ Bank
+
+Interview answer:
+
+"Association is a relationship where two independent objects interact with or use each other."
+
+3. Aggregation → Weak HAS-A Relationship
+
+Aggregation means one class contains or has another object,
+ but both objects can exist independently.
+
+class Teacher:
+    pass
+
+class Department:
+    def __init__(self, teacher):
+        self.teacher = teacher
+
+teacher = Teacher()
+department = Department(teacher)
+
+Here:
+
+Department HAS-A Teacher
+
+If the Department is removed, the Teacher can still exist.
+
+So, it is a weak HAS-A relationship.
+
+Interview answer:
+
+"Aggregation is a weak HAS-A relationship where the contained object
+ can exist independently of the container."
+
+4. Composition → Strong HAS-A Relationship
+
+Composition is also a HAS-A relationship, but the contained object depends on the main object.
+
+class Room:
+    pass
+
+class House:
+    def __init__(self):
+        self.room = Room()
+
+house = House()
+
+Here:
+
+House HAS-A Room
+
+The Room is created as part of the House.
+ If the House is destroyed, its Room is also considered part
+  of that destroyed object structure.
+
+So, it is a strong HAS-A relationship.
+
+Interview answer:
+
+"Composition is a strong HAS-A relationship where the contained
+ object's lifecycle depends on the containing object."
+
+Q3.Quantization 
+Ans:"Quantization is a model optimization technique that reduces the precision
+ of model weights or activations, such as converting FP32 or FP16 to INT8 or INT4.
+ It reduces memory usage and can improve inference speed with minimal loss in model accuracy."
+ 
+ Q4.Knowledge Graph
+ "Neo4j is a graph database used to store and query entities and relationships.
+  In Graph RAG, we can use Neo4j to store the knowledge 
+ graph and retrieve relevant relationships for generating answers."
+
+
+ Q5.Recommondation system
+ 3 main types of recommendation systems you should know for interviews:
+
+1. Content-Based Filtering
+
+It recommends items based on the similarity of items the user already likes.
+
+Example:
+If you watched action movies, the system recommends other action movies.
+
+User likes → Avengers
+              ↓
+      Similar movies
+              ↓
+      Iron Man, Thor
+
+Key idea: Item similarity
+
+2. Collaborative Filtering
+
+It recommends items based on the behavior or preferences of similar users.
+
+Example:
+
+User A → likes → Movie X, Movie Y
+User B → likes → Movie X
+
+User B may also like → Movie Y
+
+Key idea: User similarity / User behavior
+
+Two common approaches:
+
+User-based collaborative filtering
+Item-based collaborative filtering
+3. Hybrid Recommendation System
+
+It combines multiple recommendation techniques,
+ commonly content-based + collaborative filtering.
+
+Example:
+
+Netflix/Amazon-style systems can consider:
+
+What you previously watched/bought
+What similar users watched/bought
+Item features
+Your recent behavior
+
+Key idea: Combination of methods
+
