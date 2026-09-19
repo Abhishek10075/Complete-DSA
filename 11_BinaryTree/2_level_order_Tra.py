@@ -27,4 +27,33 @@ class Solution(object):
                     que.append(e.right)
             result.append(level)
         return result
-    
+
+#Solve on geeksforgeeks
+
+''' Structure of Binary Tree Node
+class Node:
+    def __init__(self, val):
+        self.data = val
+        self.left = None
+        self.right = None
+'''
+
+class Solution:
+    def levelOrder(self, root):
+        # code 
+        result=[]
+        que=deque([])
+        if root is None:
+            return result
+        
+        que.append(root)
+        while len(que)!=0:
+            e=que.popleft()
+            result.append(e.data)
+            
+            if e.left is not None:
+                que.append(e.left)
+            if e.right is not None:
+                que.append(e.right)
+            
+        return result
