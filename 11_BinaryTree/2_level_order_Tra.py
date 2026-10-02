@@ -57,3 +57,19 @@ class Solution:
                 que.append(e.right)
             
         return result
+
+#post order traversal
+class Solution(object):
+    def postorderTraversal(self, root):
+        result = []
+
+        def post(node):
+            if node is None:
+                return
+
+            post(node.left)
+            post(node.right)
+            result.append(node.val)
+
+        post(root)
+        return result
