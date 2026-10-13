@@ -7,6 +7,5 @@ class Solution(object):
             temp.next=prev
             prev=temp
             temp=front
-            
         return prev
         
