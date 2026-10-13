@@ -16,6 +16,10 @@ class Solution(object):
         for i in range(0,count//2):
             head=head.next
         return head
+'''
+Tc=o(n)+o(n/2)=o(n)
+Sc=o(1)
+'''
 
 #Solution 2->Optimal
 class Solution(object):
@@ -26,4 +30,7 @@ class Solution(object):
             slow=slow.next
             fast=fast.next.next
         return slow
-    
+'''
+TC=o(n/2)=o(n)
+SC=o(1)
+'''
